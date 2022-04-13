@@ -1,0 +1,33 @@
+@import url('./normalize.scss');
+
+@font-face {
+  font-family: 'DINNextLTW04-Medium';
+  src: url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.eot');
+  src: url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.woff2')
+      format('woff2'),
+    url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.woff')
+      format('woff'),
+    url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.ttf')
+      format('truetype'),
+    url('./assets/fonts/DINNextLTW04-Medium/DINNextLTW04-Medium.svg#DINNextLTW04-Medium')
+      format('svg');
+}
+
+@font-face {
+  font-family: 'Tungsten-Bold';
+  src: url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.eot');
+  src: url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.woff') format('woff'),
+    url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.ttf') format('truetype'),
+    url('./assets/fonts/Tungsten-Bold/Tungsten-Bold.svg#Tungsten Bold')
+      format('svg');
+}
+
+@font-face {
+  font-family: 'Valorant-Font';
+  src: url('./assets/fonts/Valorant-Font/Valorant-Font.ttf') format('truetype');
+}
