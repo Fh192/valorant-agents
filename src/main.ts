@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './normalize.scss';
-import store from './store';
+import './index.scss';
+import { router } from './router/router';
+import { key, store } from './store';
 
-createApp(App).use(store).mount('#app');
+createApp(App).use(router).use(store, key).mount('#app');

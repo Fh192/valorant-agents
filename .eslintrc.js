@@ -22,6 +22,7 @@ module.exports = {
         functions: 'never',
       },
     ],
+    'symbol-description': 0,
   },
 
   overrides: [
