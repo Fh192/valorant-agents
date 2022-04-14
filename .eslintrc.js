@@ -23,6 +23,9 @@ module.exports = {
       },
     ],
     'symbol-description': 0,
+    'vuejs-accessibility/media-has-caption': 0,
+    'operator-linebreak': 0,
+    'object-curly-newline': ['error', { consistent: true }],
   },
 
   overrides: [

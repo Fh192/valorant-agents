@@ -12,18 +12,9 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'AgentsListItem',
   props: {
-    displayIcon: {
-      type: String,
-      required: true,
-    },
-    displayName: {
-      type: String,
-      required: true,
-    },
-    uuid: {
-      type: String,
-      required: true,
-    },
+    displayIcon: { type: String, required: true },
+    displayName: { type: String, required: true },
+    uuid: { type: String, required: true },
   },
 });
 </script>
@@ -51,6 +42,7 @@ export default defineComponent({
     height: 100%;
     transition: all 0.5s ease;
     color: rgba(236, 232, 225, 0);
+    font-size: 300px;
   }
 
   &:hover {

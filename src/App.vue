@@ -13,6 +13,6 @@ export default defineComponent({
 <style lang="scss">
 #app {
   font-family: 'Tungsten-Bold';
-  font-size: 6rem;
+  font-size: 16px;
 }
 </style>

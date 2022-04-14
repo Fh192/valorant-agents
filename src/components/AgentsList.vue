@@ -43,7 +43,7 @@ export default defineComponent({
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px 100px;
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
 }
 </style>
