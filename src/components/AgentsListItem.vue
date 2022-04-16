@@ -31,6 +31,7 @@ export default defineComponent({
   background-color: #ff4654;
   border: 3px solid #ff8189ab;
   cursor: pointer;
+  font-family: 'Tungsten-Bold';
 
   &:after {
     content: '';

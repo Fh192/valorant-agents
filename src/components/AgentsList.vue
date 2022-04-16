@@ -11,24 +11,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
-import { Agent } from '../types/agent';
-import { agentsApi } from '../api/agentsApi';
+import { defineComponent, onMounted, computed } from 'vue';
 import AgentsListItem from './AgentsListItem.vue';
+import { useStore } from '../store';
 
 export default defineComponent({
   name: 'AgentsList',
   components: { AgentsListItem },
   setup() {
-    const agents = ref<Agent[]>([]);
-
-    const fetchAgents = async () => {
-      const response = await agentsApi.getAllAgents();
-      agents.value = response;
-    };
+    const { state, dispatch } = useStore();
+    const agents = computed(() => state.agents);
+    const hasAgents = computed(() => agents.value.length > 0);
 
     onMounted(() => {
-      fetchAgents();
+      if (!hasAgents.value) {
+        dispatch('GET_AGENTS');
+      }
     });
 
     return { agents };
