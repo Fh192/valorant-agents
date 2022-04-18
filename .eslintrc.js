@@ -26,6 +26,10 @@ module.exports = {
     'vuejs-accessibility/media-has-caption': 0,
     'operator-linebreak': 0,
     'object-curly-newline': ['error', { consistent: true }],
+    'implicit-arrow-linebreak': 0,
+    'function-paren-newline': 0,
+    'no-shadow': 0,
+    'vuejs-accessibility/click-events-have-key-events': 0,
   },
 
   overrides: [

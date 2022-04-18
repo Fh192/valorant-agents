@@ -7,6 +7,12 @@ export interface Ability {
   displayName: string;
   description: string;
   displayIcon: string;
+  slot: string;
+}
+
+export interface ActiveAbility extends Omit<Ability, 'slot'> {
+  id: number;
+  video: string;
 }
 
 export interface Agent {
@@ -19,3 +25,23 @@ export interface Agent {
   role: Role;
   abilities: Ability[];
 }
+
+export type AgentName =
+  | 'jett'
+  | 'raze'
+  | 'breach'
+  | 'omen'
+  | 'brimstone'
+  | 'phoenix'
+  | 'sage'
+  | 'sova'
+  | 'viper'
+  | 'cypher'
+  | 'reyna'
+  | 'killjoy'
+  | 'skye'
+  | 'yoru'
+  | 'astra'
+  | 'kayo'
+  | 'neon'
+  | 'chamber';
