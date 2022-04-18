@@ -1,16 +1,26 @@
 <template>
   <div class="agentBiography">
     <h3 class="label">// Biography</h3>
-    <p class="description">{{ biography }}</p>
+    <AppearanceTransition>
+      <p class="description" :key="biography">{{ biography }}</p>
+    </AppearanceTransition>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
+import { useStore } from '../store';
+import AppearanceTransition from './AppearanceTransition.vue';
 
 export default defineComponent({
   name: 'AgentDetailsBiography',
-  props: { biography: { type: String, required: true } },
+  components: { AppearanceTransition },
+  setup() {
+    const { state } = useStore();
+    const biography = computed(() => state.agent.description);
+
+    return { biography };
+  },
 });
 </script>
 
@@ -25,9 +35,19 @@ export default defineComponent({
 
 .label {
   text-transform: uppercase;
+  color: #383e3a;
+
+  @media screen and (min-width: 700px) {
+    color: #ece8e1;
+  }
 }
 
 .description {
   line-height: 1.5;
+  color: #768079;
+
+  @media screen and (min-width: 700px) {
+    color: #ece8e1;
+  }
 }
 </style>

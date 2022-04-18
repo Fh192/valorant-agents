@@ -15,4 +15,7 @@ export const routes = [
 export const router = createRouter({
   routes,
   history: createWebHistory(process.env.BASE_URL),
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });

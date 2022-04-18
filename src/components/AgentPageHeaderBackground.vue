@@ -1,14 +1,16 @@
 <template>
-  <video
-    class="backgroundVideo"
-    poster="../assets/agent-background.jpg"
-    autoplay
-    muted
-    preload
-    loop
-  >
-    <source src="../assets/agent-background.mp4" type="video/mp4" />
-  </video>
+  <div class="wrapper">
+    <video
+      class="backgroundVideo"
+      poster="../assets/agent-background.jpg"
+      autoplay
+      muted
+      preload
+      loop
+    >
+      <source src="../assets/agent-background.mp4" type="video/mp4" />
+    </video>
+  </div>
 </template>
 
 <script lang="ts">
@@ -20,12 +22,28 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.backgroundVideo {
+.wrapper {
   position: absolute;
   top: 0;
-  z-index: -1;
   width: 100%;
-  object-fit: cover;
   height: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #0f1923;
+  }
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
