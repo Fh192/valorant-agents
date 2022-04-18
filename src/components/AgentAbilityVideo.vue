@@ -3,7 +3,6 @@
     <video class="abilityVideo" :src="video" autoplay muted preload loop>
       <source :src="video" type="video/mp4" />
     </video>
-
     <span class="noVideoMessage" v-if="!video">Video is not available for this ability</span>
   </div>
 </template>
@@ -34,6 +33,12 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   background-color: #0f1923;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
 
   &::after {
     content: '';
