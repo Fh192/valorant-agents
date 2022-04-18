@@ -56,9 +56,16 @@ export default defineComponent({
       color: rgba(236, 232, 225, 1);
     }
   }
+
+  @media screen and (max-width: 375px) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .icon {
+  max-width: 256px;
+  max-height: 256px;
   width: inherit;
   height: inherit;
 }

@@ -39,7 +39,7 @@ export default defineComponent({
   z-index: 1;
 
   @media screen and (max-width: 1000px) {
-    right: 0%;
+    right: 20%;
     transform: translate(20%, 0);
   }
 
@@ -48,10 +48,9 @@ export default defineComponent({
     transform: translate(50%, 0);
   }
 }
-
 .loaded {
   display: block;
-  animation: load 0.5s ease-out 0.3s 1 forwards;
+  animation: load 0.3s ease-out 0.4s 1 forwards;
   opacity: 0;
 }
 
@@ -60,7 +59,6 @@ export default defineComponent({
     opacity: 0;
     transform: scale(0.7) translate(50%, 0);
   }
-
   100% {
     opacity: 1;
     transform: scale(1) translate(50%, 0);

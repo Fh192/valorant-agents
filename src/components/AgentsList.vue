@@ -43,5 +43,9 @@ export default defineComponent({
   gap: 60px 100px;
   max-width: 1200px;
   width: 100%;
+
+  @media screen and (max-width: 700px) {
+    gap: 30px 60px;
+  }
 }
 </style>

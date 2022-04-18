@@ -65,8 +65,7 @@ export default defineComponent({
 }
 
 .content {
-  padding: 150px 30px;
-  padding-right: 0;
+  padding: 150px 0 100px 30px;
   border-left: 1px solid rgba(9, 9, 9, 0.4);
   border-right: 1px solid rgba(9, 9, 9, 0.4);
 
@@ -79,7 +78,7 @@ export default defineComponent({
     flex-direction: column;
     gap: 60px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   @media screen and (max-width: 435px) {

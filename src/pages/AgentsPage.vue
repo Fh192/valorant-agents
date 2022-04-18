@@ -37,5 +37,9 @@ export default defineComponent({
   line-height: 110%;
   color: #ffffff;
   text-align: center;
+
+  @media screen and (max-width: 400px) {
+    font-size: 40px;
+  }
 }
 </style>
