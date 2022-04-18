@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, onMounted } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { useStore } from '../store';
 import { Ability } from '../types/agent';
 import AgentAbilitiesListItem from './AgentAbilitiesListItem.vue';
@@ -19,16 +19,8 @@ export default defineComponent({
   name: 'AgentAbilitiesList',
   components: { AgentAbilitiesListItem },
   setup() {
-    const { getters, commit } = useStore();
+    const { getters } = useStore();
     const abilities = computed<Ability[]>(() => getters.abilities);
-
-    onMounted(() => {
-      commit('SET_ACTIVE_ABILITY', {
-        ...abilities.value[0],
-        id: 0,
-        video: '',
-      });
-    });
 
     return { abilities };
   },

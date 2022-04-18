@@ -51,7 +51,8 @@ export default defineComponent({
 
 .loaded {
   display: block;
-  animation: load 0.3s ease-out 0s 1;
+  animation: load 0.5s ease-out 0.3s 1 forwards;
+  opacity: 0;
 }
 
 @keyframes load {

@@ -8,7 +8,6 @@
 import { defineComponent, PropType, computed } from 'vue';
 import { useStore } from '../store';
 import { Ability, ActiveAbility } from '../types/agent';
-import { getAgentAbilityVideo } from '../utils/getAgentAbilityVideo';
 
 export default defineComponent({
   name: 'AgentAbilitiesListItem',
@@ -17,12 +16,11 @@ export default defineComponent({
     id: { type: Number, required: true },
   },
   setup(props) {
-    const { state, getters, commit } = useStore();
-    const agentName = computed(() => state.agent.displayName);
+    const { getters, commit } = useStore();
     const active = computed(() => getters.isAbilityActive(props.id));
 
     const setActiveAbility = () => {
-      const video = getAgentAbilityVideo(agentName.value.toLowerCase())[props.id];
+      const video = getters.abilityVideo(props.id);
       const activeAbility: ActiveAbility = { ...props.ability, id: props.id, video };
       commit('SET_ACTIVE_ABILITY', activeAbility);
     };

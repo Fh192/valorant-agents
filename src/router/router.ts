@@ -3,10 +3,9 @@ import AgentPage from '../pages/AgentPage.vue';
 import AgentsPage from '../pages/AgentsPage.vue';
 
 export const routes = [
-  { path: '/', redirect: '/agents' },
-  { path: '/agents', component: AgentsPage },
+  { path: '/', component: AgentsPage },
   {
-    path: '/agents/:uuid',
+    path: '/:uuid',
     component: AgentPage,
     props: (route: RouteLocation) => ({ uuid: route.params.uuid }),
   },

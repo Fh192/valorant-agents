@@ -27,7 +27,7 @@ export const actions: ActionTree<State, State> & Actions = {
     commit(MutationTypes.SET_AGENT, agent);
 
     const activeAbility: ActiveAbility = {
-      ...agent.abilities[0],
+      ...getters.abilities[0],
       id: 0,
       video: getters.abilityVideo(0),
     };
