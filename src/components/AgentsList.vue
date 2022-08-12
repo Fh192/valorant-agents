@@ -1,6 +1,6 @@
 <template>
   <ul class="agentsList">
-    <AgentsListItem
+    <agents-list-item
       v-for="agent in agents"
       :key="agent.uuid"
       :display-icon="agent.displayIcon"
@@ -24,9 +24,7 @@ export default defineComponent({
     const hasAgents = computed(() => agents.value.length > 0);
 
     onMounted(() => {
-      if (!hasAgents.value) {
-        dispatch('GET_AGENTS');
-      }
+      if (!hasAgents.value) dispatch('GET_AGENTS');
     });
 
     return { agents };

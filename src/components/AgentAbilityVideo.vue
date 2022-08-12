@@ -1,7 +1,7 @@
 <template>
   <div class="abilityVideoWrapper">
-    <video class="abilityVideo" :src="video" autoplay muted preload loop>
-      <source :src="video" type="video/mp4" />
+    <video class="abilityVideo" autoplay muted preload loop :src="video">
+      <source type="video/mp4" :src="video" />
     </video>
     <span class="noVideoMessage" v-if="!video">Video is not available for this ability</span>
   </div>

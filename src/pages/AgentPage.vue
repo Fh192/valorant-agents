@@ -1,12 +1,12 @@
 <template>
   <div class="agentPage">
-    <AgentPageHeader />
+    <agent-page-header />
     <div class="container">
       <div class="content">
         <div class="details">
-          <AgentDetails />
+          <agent-details />
         </div>
-        <AgentAbilities />
+        <agent-abilities />
       </div>
     </div>
   </div>

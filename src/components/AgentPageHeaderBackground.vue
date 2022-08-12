@@ -4,8 +4,8 @@
       class="backgroundVideo"
       poster="../assets/agent-background.jpg"
       autoplay
-      muted
       preload
+      muted
       loop
     >
       <source src="../assets/agent-background.mp4" type="video/mp4" />

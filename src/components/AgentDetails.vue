@@ -1,7 +1,7 @@
 <template>
   <div class="agentDetails">
-    <AgentDetailsRole />
-    <AgentDetailsBiography />
+    <agent-details-role />
+    <agent-details-biography />
   </div>
 </template>
 

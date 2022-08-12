@@ -1,11 +1,11 @@
 <template>
   <div class="agentAbilities">
     <div class="inner">
-      <h2 class="label">Special Abilities</h2>
-      <AgentAbilitiesList />
-      <AgentAbilityDescription />
+      <h2 class="label" v-text="'Special Abilities'" />
+      <agent-abilities-list />
+      <agent-ability-description />
     </div>
-    <AgentAbilityVideo />
+    <agent-ability-video />
   </div>
 </template>
 

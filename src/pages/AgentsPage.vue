@@ -1,7 +1,7 @@
 <template>
   <div class="agents">
-    <h1 class="title">SELECT AN AGENT!</h1>
-    <AgentsList />
+    <h1 class="title" v-text="'SELECT AN AGENT!'" />
+    <agents-list />
   </div>
 </template>
 

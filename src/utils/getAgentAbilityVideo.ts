@@ -1,6 +1,6 @@
 import agents, { AgentsAbilitiesVideos } from '../assets/agentsAbilitiesVideos';
 
 export const getAgentAbilityVideo = (agentName: string) => {
-  const { videos } = agents.find((agent) => agent.name === agentName) as AgentsAbilitiesVideos;
+  const { videos } = agents.find(({ name }) => name === agentName) as AgentsAbilitiesVideos;
   return videos;
 };

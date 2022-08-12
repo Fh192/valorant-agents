@@ -1,9 +1,9 @@
 <template>
   <div class="agentBiography">
-    <h3 class="label">// Biography</h3>
-    <AppearanceTransition>
-      <p class="description" :key="biography">{{ biography }}</p>
-    </AppearanceTransition>
+    <h3 class="label" v-text="'// Biography'" />
+    <appearance-transition>
+      <p class="description" :key="biography" v-text="biography" />
+    </appearance-transition>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <ul class="abilities">
-    <AgentAbilitiesListItem
+    <agent-abilities-list-item
       v-for="(ability, index) in abilities"
       :key="ability.displayName"
       :ability="ability"

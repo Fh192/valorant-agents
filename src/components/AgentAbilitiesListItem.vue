@@ -1,6 +1,6 @@
 <template>
   <li :class="['ability', { active }]" @click="setActiveAbility">
-    <img class="abilityIcon" :src="ability.displayIcon" alt="" />
+    <img class="abilityIcon" :src="ability.displayIcon" :alt="ability.displayName" />
   </li>
 </template>
 

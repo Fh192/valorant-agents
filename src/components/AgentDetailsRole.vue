@@ -1,13 +1,13 @@
 <template>
   <div class="agentRole">
-    <h3 class="label">// Role</h3>
+    <h3 class="label" v-text="'// Role'" />
     <div class="role">
-      <AppearanceTransition>
-        <h2 class="title" :key="title">{{ title }}</h2>
-      </AppearanceTransition>
-      <AppearanceTransition>
-        <img class="icon" :src="icon" :key="icon" v-if="icon" alt="" />
-      </AppearanceTransition>
+      <appearance-transition>
+        <h2 class="title" :key="title" v-text="title" />
+      </appearance-transition>
+      <appearance-transition>
+        <img v-if="icon" class="icon" alt="role icon" :src="icon" :key="icon" />
+      </appearance-transition>
     </div>
   </div>
 </template>

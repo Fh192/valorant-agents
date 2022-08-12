@@ -1,9 +1,9 @@
 <template>
   <img
+    v-if="portrait"
+    alt="agent portrait"
     :class="['agentFullPortrait', { loaded }]"
     :src="portrait"
-    v-if="portrait"
-    alt=""
     @load="onLoad"
   />
 </template>

@@ -1,22 +1,22 @@
 <template>
   <header class="header">
-    <AgentPageHeaderBackground />
+    <agent-page-header-background />
     <div class="container">
       <div class="details">
-        <AgentDetails />
+        <agent-details />
       </div>
-      <AgentFullPortrait />
-      <img class="background" :src="background" alt="" />
+      <agent-full-portrait />
+      <img class="background" alt="" :src="background" />
     </div>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
+import { useStore } from '../store';
 import AgentFullPortrait from './AgentFullPortrait.vue';
 import AgentDetails from './AgentDetails.vue';
 import AgentPageHeaderBackground from './AgentPageHeaderBackground.vue';
-import { useStore } from '../store';
 
 export default defineComponent({
   name: 'AgentPageHeader',

@@ -1,7 +1,7 @@
 <template>
   <router-link :to="`/${uuid}`">
     <li class="agent" :data-name="displayName">
-      <img class="icon" :src="displayIcon" alt="" />
+      <img class="icon" alt="" :src="displayIcon" />
     </li>
   </router-link>
 </template>

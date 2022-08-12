@@ -4,26 +4,28 @@ import { api, ServerResponse } from './instance';
 
 export const agentsApi = {
   getAllAgents: async (language: Language = 'en-US'): Promise<Agent[]> => {
-    const response = await api.get<ServerResponse<Agent[]>>(
-      `agents?isPlayableCharacter=true&language=${language}`
-    );
-    const { status, error, data: agents } = response.data;
+    try {
+      const { data } = await api.get<ServerResponse<Agent[]>>(
+        `agents?isPlayableCharacter=true&language=${language}`
+      );
+      const { data: agents } = data;
 
-    if (status !== 200) {
-      throw new Error(error);
+      return agents;
+    } catch (err) {
+      console.error(err);
+      return [];
     }
-
-    return agents;
   },
 
   getAgentByUuid: async (uuid: string, language: Language = 'en-US'): Promise<Agent> => {
-    const response = await api.get<ServerResponse<Agent>>(`agents/${uuid}?language=${language}`);
-    const { status, error, data: agent } = response.data;
+    try {
+      const { data } = await api.get<ServerResponse<Agent>>(`agents/${uuid}?language=${language}`);
+      const { data: agent } = data;
 
-    if (status !== 200) {
-      throw new Error(error);
+      return agent;
+    } catch (err) {
+      console.error(err);
+      throw err;
     }
-
-    return agent;
   },
 };

@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
-    <AppearanceTransition>
-      <h3 class="title" :key="name">{{ name }}</h3>
-    </AppearanceTransition>
-    <AppearanceTransition>
-      <p class="description" :key="description">{{ description }}</p>
-    </AppearanceTransition>
+    <appearance-transition>
+      <h3 class="title" :key="name" v-text="name" />
+    </appearance-transition>
+    <appearance-transition>
+      <p class="description" :key="description" v-text="description" />
+    </appearance-transition>
   </div>
 </template>
 
