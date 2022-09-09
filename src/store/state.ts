@@ -10,7 +10,7 @@ export const state = (): State => ({
   agent: {
     uuid: '',
     displayName: '',
-    fullPortraitV2: '',
+    fullPortrait: '',
     description: '',
     displayIcon: '',
     background: '',

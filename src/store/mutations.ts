@@ -30,7 +30,7 @@ export const mutations: MutationTree<State> & Mutations = {
     state.agent = {
       uuid: '',
       displayName: '',
-      fullPortraitV2: '',
+      fullPortrait: '',
       description: '',
       displayIcon: '',
       background: '',

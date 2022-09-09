@@ -16,7 +16,7 @@ export default defineComponent({
   name: 'AgentFullPortrait',
   setup() {
     const { state } = useStore();
-    const portrait = computed(() => state.agent.fullPortraitV2);
+    const portrait = computed(() => state.agent.fullPortrait);
     const loaded = ref(false);
 
     const onLoad = () => {

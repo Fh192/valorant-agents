@@ -20,7 +20,7 @@ export interface Agent {
   displayName: string;
   description: string;
   displayIcon: string;
-  fullPortraitV2: string;
+  fullPortrait: string;
   background: string;
   role: Role;
   abilities: Ability[];
